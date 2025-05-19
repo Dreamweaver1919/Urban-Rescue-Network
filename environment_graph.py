@@ -212,7 +212,7 @@ class RescueEnvCore:
     def _nearest_task_strategy(self):
         actions = {}
         free_rescuers = [r for r in self.rescuers if not r.busy and not r.task_locked]
-        available_tasks = [t for t in self.tasks if t.survivors_not_rescued > 0 and self.current_time <= t.deadline]
+        available_tasks = [t for t in self.tasks if t.rescued_victim < t.victim and self.current_time <= t.deadline]
 
         # 打印调试信息
         print(f"\n[任务分配策略] 时间: {self.current_time}")
@@ -223,12 +223,12 @@ class RescueEnvCore:
         print(f"可用任务: {len(available_tasks)}")
         for t in available_tasks:
             print(
-                f"  任务#{t.task_id} 在节点{t.node_id}, 受害者: {t.survivors_not_rescued}, 截止时间: {t.deadline}")
+                f"  任务#{t.task_id} 在节点{t.node_id}, 受害者: {t.victim - t.rescued_victim}, 截止时间: {t.deadline}")
 
         # 检查是否有救援人员需要重新分配
         for rescuer in self.rescuers:
             if rescuer.task and (
-                    rescuer.task.survivors_not_rescued <= 0 or self.current_time > rescuer.task.deadline):
+                    rescuer.task.rescued_victim >= rescuer.task.victim or self.current_time > rescuer.task.deadline):
                 print(f"  救援人员#{rescuer.rescuer_id} 任务已完成或过期，重新分配")
                 rescuer.task.remove_rescuer(rescuer)
                 free_rescuers.append(rescuer)
@@ -261,7 +261,7 @@ class RescueEnvCore:
                 continue
 
             # 计算紧急度，优先处理时间紧迫且受害者多的任务
-            urgency = (task.survivors_not_rescued) / (time_left - required_time + 1e-5)
+            urgency = (task.victim - task.rescued_victim) / (time_left - required_time + 1e-5)
             print(f"  任务#{task.task_id} 紧急度: {urgency}")
             task_priority.append((-urgency, task.task_id, task, closest_rescuer))
 

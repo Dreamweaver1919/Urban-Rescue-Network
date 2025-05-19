@@ -53,21 +53,21 @@ def Visualize(env):
     )
 
     # ================== 进度图初始化 ==================
-    progress_line, = ax_progress.plot([], [], 'b-', lw=2, label='Victims Rescued')
+    progress_line, = ax_progress.plot([], [], 'b-', lw=2, label='实时进度')
     target_line = ax_progress.axhline(
         env.total_victims, 
         color='r', 
         linestyle='--', 
-        label='Total Target'
+        label='总目标'
     )
     
     # ================== 坐标范围设置 ==================
     ax_main.set(
         xlim=(min(node_x)-5, max(node_x)+5),
         ylim=(min(node_y)-5, max(node_y)+5),
-        xlabel="X",
-        ylabel="Y",
-        title="Real-Time Urban Rescue Network"
+        xlabel="X 坐标",
+        ylabel="Y 坐标",
+        title="实时救援路径网络"
     )
 
     ax_progress.set(

@@ -425,7 +425,7 @@ def Visualize(env):
                                   interval=200, blit=False, repeat=False, fargs=(
             env, rescuer_scatter, task_scatter, status_text, time_text, progress_line, total_target_line))
 
-    ani.save('rescue_simulation3.gif', writer='pillow', fps=5, dpi=100)
+    ani.save('rescue_simulation_for_Decay_Evacuation_Method.gif', writer='pillow', fps=5, dpi=100)
 
 
 # 读取保存的模拟数据
@@ -449,7 +449,7 @@ if __name__ == "__main__":
     tasks = generate_random_tasks(num_tasks)
     rescuers = init_rescuers(num_rescuers)
     """
-    tasks, rescuers =load_simulation_data("data1.json")
+    tasks, rescuers =load_simulation_data("Urban-Rescue-Network\data2.json")
     env = RescueEnvCore(tasks, rescuers)
     state = env.reset()
     Visualize(env=env)

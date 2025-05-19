@@ -572,7 +572,6 @@ class RescueEnvCore:
             np.array(task_sizes)
         )
 
-
 def Visualize(env):
     """相当于可视化的总函数，在 main 中调用 Visualize(env=env)"""
     import matplotlib.pyplot as plt
@@ -695,7 +694,7 @@ def Visualize(env):
                                   interval=200, blit=False, repeat=False, fargs=(
             env, rescuer_scatter, task_scatter, status_text, time_text, progress_line, total_target_line))
 
-    ani.save('rescue_simulation3.gif', writer='pillow', fps=5, dpi=100)
+    ani.save('rescue_simulation_for_Decay_Add_Allocation_Method.gif', writer='pillow', fps=5, dpi=100)
 
 # 保存随机生成的数据到 JSON 文件
 def save_random_data(tasks, rescuers):
@@ -726,19 +725,19 @@ def load_simulation_data(filename):
 # 示例使用
 if __name__ == "__main__":
     
-    num_tasks = 150
-    num_rescuers = 150
+    # num_tasks = 150
+    # num_rescuers = 150
     # tasks = generate_random_tasks(num_tasks)
     # rescuers = init_rescuers(num_rescuers)
     # save_random_data(tasks, rescuers)
 
-    tasks, rescuers =load_simulation_data("data2.json")
+    tasks, rescuers =load_simulation_data("Urban-Rescue-Network\data2.json")
     env = RescueEnvCore(tasks, rescuers)
     state = env.reset()
-    # Visualize(env=env)
-    done = False
-    while not done:
-        state, done = env.step()
-        env.print_status()
+    Visualize(env=env)
+    # done = False
+    # while not done:
+    #     state, done = env.step()
+    #     env.print_status()
     
     

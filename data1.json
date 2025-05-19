@@ -1,0 +1,286 @@
+{
+    "tasks": [
+        {
+            "task_id": 0,
+            "arrive_time": 11,
+            "x": -7,
+            "y": 5,
+            "victim": 84,
+            "deadline": 64
+        },
+        {
+            "task_id": 1,
+            "arrive_time": 22,
+            "x": -6,
+            "y": 13,
+            "victim": 33,
+            "deadline": 158
+        },
+        {
+            "task_id": 2,
+            "arrive_time": 26,
+            "x": -18,
+            "y": -19,
+            "victim": 22,
+            "deadline": 230
+        },
+        {
+            "task_id": 3,
+            "arrive_time": 47,
+            "x": -11,
+            "y": -4,
+            "victim": 22,
+            "deadline": 251
+        },
+        {
+            "task_id": 4,
+            "arrive_time": 33,
+            "x": 19,
+            "y": -2,
+            "victim": 60,
+            "deadline": 108
+        },
+        {
+            "task_id": 5,
+            "arrive_time": 21,
+            "x": -15,
+            "y": -10,
+            "victim": 46,
+            "deadline": 118
+        },
+        {
+            "task_id": 6,
+            "arrive_time": 1,
+            "x": -1,
+            "y": 1,
+            "victim": 25,
+            "deadline": 181
+        },
+        {
+            "task_id": 7,
+            "arrive_time": 53,
+            "x": 16,
+            "y": -1,
+            "victim": 77,
+            "deadline": 111
+        },
+        {
+            "task_id": 8,
+            "arrive_time": 14,
+            "x": -3,
+            "y": -11,
+            "victim": 66,
+            "deadline": 82
+        },
+        {
+            "task_id": 9,
+            "arrive_time": 55,
+            "x": 12,
+            "y": 13,
+            "victim": 29,
+            "deadline": 210
+        },
+        {
+            "task_id": 10,
+            "arrive_time": 21,
+            "x": -18,
+            "y": 7,
+            "victim": 20,
+            "deadline": 246
+        },
+        {
+            "task_id": 11,
+            "arrive_time": 15,
+            "x": -20,
+            "y": -17,
+            "victim": 98,
+            "deadline": 60
+        },
+        {
+            "task_id": 12,
+            "arrive_time": 37,
+            "x": 20,
+            "y": 6,
+            "victim": 90,
+            "deadline": 87
+        },
+        {
+            "task_id": 13,
+            "arrive_time": 25,
+            "x": -4,
+            "y": -6,
+            "victim": 36,
+            "deadline": 150
+        },
+        {
+            "task_id": 14,
+            "arrive_time": 18,
+            "x": 11,
+            "y": 20,
+            "victim": 64,
+            "deadline": 88
+        },
+        {
+            "task_id": 15,
+            "arrive_time": 18,
+            "x": 1,
+            "y": 15,
+            "victim": 76,
+            "deadline": 77
+        },
+        {
+            "task_id": 16,
+            "arrive_time": 52,
+            "x": -11,
+            "y": -8,
+            "victim": 41,
+            "deadline": 161
+        },
+        {
+            "task_id": 17,
+            "arrive_time": 42,
+            "x": 19,
+            "y": -14,
+            "victim": 36,
+            "deadline": 167
+        },
+        {
+            "task_id": 18,
+            "arrive_time": 19,
+            "x": 10,
+            "y": 1,
+            "victim": 55,
+            "deadline": 100
+        },
+        {
+            "task_id": 19,
+            "arrive_time": 49,
+            "x": 8,
+            "y": 18,
+            "victim": 70,
+            "deadline": 113
+        }
+    ],
+    "rescuers": [
+        {
+            "rescuer_id": 0,
+            "x": -20,
+            "y": -7,
+            "efficiency": 1
+        },
+        {
+            "rescuer_id": 1,
+            "x": -3,
+            "y": 14,
+            "efficiency": 1
+        },
+        {
+            "rescuer_id": 2,
+            "x": 9,
+            "y": -5,
+            "efficiency": 3
+        },
+        {
+            "rescuer_id": 3,
+            "x": 5,
+            "y": 10,
+            "efficiency": 1
+        },
+        {
+            "rescuer_id": 4,
+            "x": 7,
+            "y": -6,
+            "efficiency": 1
+        },
+        {
+            "rescuer_id": 5,
+            "x": 20,
+            "y": -12,
+            "efficiency": 2
+        },
+        {
+            "rescuer_id": 6,
+            "x": -16,
+            "y": -18,
+            "efficiency": 1
+        },
+        {
+            "rescuer_id": 7,
+            "x": -7,
+            "y": 14,
+            "efficiency": 2
+        },
+        {
+            "rescuer_id": 8,
+            "x": -6,
+            "y": 11,
+            "efficiency": 1
+        },
+        {
+            "rescuer_id": 9,
+            "x": -16,
+            "y": -18,
+            "efficiency": 3
+        },
+        {
+            "rescuer_id": 10,
+            "x": -19,
+            "y": -19,
+            "efficiency": 1
+        },
+        {
+            "rescuer_id": 11,
+            "x": -10,
+            "y": 4,
+            "efficiency": 2
+        },
+        {
+            "rescuer_id": 12,
+            "x": -5,
+            "y": -12,
+            "efficiency": 1
+        },
+        {
+            "rescuer_id": 13,
+            "x": -20,
+            "y": -11,
+            "efficiency": 1
+        },
+        {
+            "rescuer_id": 14,
+            "x": -19,
+            "y": 17,
+            "efficiency": 2
+        },
+        {
+            "rescuer_id": 15,
+            "x": -11,
+            "y": 9,
+            "efficiency": 2
+        },
+        {
+            "rescuer_id": 16,
+            "x": 9,
+            "y": -6,
+            "efficiency": 1
+        },
+        {
+            "rescuer_id": 17,
+            "x": 11,
+            "y": -2,
+            "efficiency": 2
+        },
+        {
+            "rescuer_id": 18,
+            "x": 19,
+            "y": -4,
+            "efficiency": 1
+        },
+        {
+            "rescuer_id": 19,
+            "x": -5,
+            "y": -5,
+            "efficiency": 2
+        }
+    ]
+}

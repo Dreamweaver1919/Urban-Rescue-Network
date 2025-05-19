@@ -731,7 +731,7 @@ if __name__ == "__main__":
     # rescuers = init_rescuers(num_rescuers)
     # save_random_data(tasks, rescuers)
 
-    tasks, rescuers =load_simulation_data("Urban-Rescue-Network\data2.json")
+    tasks, rescuers =load_simulation_data(r'data2.json')
     env = RescueEnvCore(tasks, rescuers)
     state = env.reset()
     Visualize(env=env)

@@ -554,7 +554,7 @@ class RescueEnvCore:
         for task in self.tasks:
             if self.current_time > task.deadline:
                 task_colors.append('gray')  # Missed tasks
-            elif self.survivors_not_rescued == 0:
+            elif task.survivors_not_rescued == 0:
                 task_colors.append('blue')  # Completed tasks
             else:
                 task_colors.append('orange')  # Active tasks
@@ -731,7 +731,7 @@ if __name__ == "__main__":
     # rescuers = init_rescuers(num_rescuers)
     # save_random_data(tasks, rescuers)
 
-    tasks, rescuers =load_simulation_data(r'data2.json')
+    tasks, rescuers =load_simulation_data(r'/Users/zhkevin/Desktop/URN/Urban-Rescue-Network/data2.json')
     env = RescueEnvCore(tasks, rescuers)
     state = env.reset()
     Visualize(env=env)

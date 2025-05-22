@@ -467,7 +467,7 @@ class RescueEnvCore:
         return actions
 
     # V1按需分配
-    def _nearest_task_strategy_v1(self):
+    def _nearest_task_strategy_Allocation(self):
         import math
         actions = {}
         available_tasks = [task for task in self.tasks
@@ -608,7 +608,7 @@ class RescueEnvCore:
         return actions
 
     # v2撤离法
-    def _nearest_task_strategy_v2(self):
+    def _nearest_task_strategy_Evacuation(self):
         """撤离法"""
         actions = {}
         self.exclude_tasks = []

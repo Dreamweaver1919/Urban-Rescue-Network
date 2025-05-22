@@ -339,6 +339,15 @@ def train(args):
             }, save_path)
             print(f"Saved model to {save_path}")
 
+        # After training loop
+    final_save_path = "models/mappo_final.pt"
+    torch.save({
+        'actors': [a.state_dict() for a in agent.actors],
+        'critic': agent.critic.state_dict(),
+        'config': vars(args)
+    }, final_save_path)
+    print(f"\nFinal model saved to {final_save_path}")
+
     # 训练结果可视化
     plt.figure(figsize=(15,6))
     
